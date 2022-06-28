@@ -1,3 +1,15 @@
+import { useState } from 'react';
+import { Box } from '@mui/material';
+import { HeroBanner } from '../components/HeroBanner';
+import { SearchExercises } from '../components/SearchExercises';
+import { Exercises } from '../components/Exercises';
+
 export function Home() {
-	return <div> Home page</div>;
+	return (
+		<Box>
+			<HeroBanner />
+			<SearchExercises />
+			<Exercises />
+		</Box>
+	);
 }

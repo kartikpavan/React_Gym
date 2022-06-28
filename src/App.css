@@ -1,3 +1,7 @@
+body {
+	font-family: 'Josefin Sans';
+	background-color: #fffafb;
+}
 .hero-banner-img {
 	position: absolute;
 	right: 40px;

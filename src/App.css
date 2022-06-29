@@ -32,8 +32,32 @@ body {
 	transition: 0.3s all ease-in-out;
 }
 
+.exercise-video {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	width: 387px;
+	height: 381px;
+	text-decoration: none;
+}
+
 @media screen and (max-width: 1200px) {
 	.hero-banner-img {
 		display: none;
+	}
+
+	.exercise-card {
+		width: 320px;
+	}
+
+	.exercise-video {
+		width: 320px;
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.exercise-card {
+		width: 280px;
 	}
 }

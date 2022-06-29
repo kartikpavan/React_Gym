@@ -2,6 +2,10 @@ import { Box, Stack, Typography, Button } from '@mui/material';
 import Banner from '../assets/images/banner.png';
 
 export function HeroBanner() {
+	const HandleShowMore = () => {
+		window.scrollTo({ top: 1800, behavior: 'smooth' });
+	};
+
 	return (
 		<Box
 			sx={{
@@ -25,7 +29,13 @@ export function HeroBanner() {
 			<Typography fontSize="22px" lineHeight="35px" mb={4}>
 				Check out More
 			</Typography>
-			<Button variant="contained" color="error" href="#exercises" p="10px">
+			<Button
+				variant="contained"
+				color="error"
+				href="#exercises"
+				p="10px"
+				onClick={HandleShowMore}
+			>
 				View More Exercises
 			</Button>
 			<Typography

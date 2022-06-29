@@ -34,7 +34,6 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 			);
 
 			window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
-			console.log(searchedExercises);
 			setSearch('');
 			setExercises(searchedExercises);
 		}
@@ -93,6 +92,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 					data={bodyParts}
 					bodyPart={bodyPart}
 					setBodyPart={setBodyPart}
+					isBodyPart
 				/>
 			</Box>
 		</Stack>

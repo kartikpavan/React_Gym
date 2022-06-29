@@ -39,7 +39,7 @@ export function Exercises({ setExercises, bodyPart, exercises }) {
 	}, [bodyPart]);
 
 	return (
-		<Box id="exerises" sx={{ mt: { lg: '110px' } }} mt="50px" p="20px">
+		<Box id="exercises" sx={{ mt: { lg: '110px' } }} mt="50px" p="20px">
 			<Typography variant="h3" mb="48px">
 				Showing Results
 			</Typography>

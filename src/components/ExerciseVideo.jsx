@@ -25,6 +25,17 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
 							rel="noreferrer"
 						>
 							<img src={item.video.thumbnails[0].url} alt="video" />
+							<Box>
+								<Typography variant="h6" fontWeight="bold" color="#000">
+									{item.video.title}
+								</Typography>
+								<Typography fontSize="16px" color="#3d3d3d">
+									{item.video.channelName}
+								</Typography>
+								<Typography fontSize="12px" color="#000fff">
+									{item.video.viewCountText}
+								</Typography>
+							</Box>
 						</a>
 					);
 				})}

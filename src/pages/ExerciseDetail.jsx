@@ -13,6 +13,8 @@ import SimilarExercises from '../components/SimilarExercises';
 export function ExeriseDetail() {
 	const [exerciseDetail, setExerciseDetail] = useState({});
 	const [exerciseVideos, setExerciseVideos] = useState([]);
+	const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
+	const [equipmentExercises, setEquipmentExercises] = useState([]);
 
 	const { id } = useParams();
 
@@ -30,6 +32,18 @@ export function ExeriseDetail() {
 				youtubeVideoOptions
 			);
 			setExerciseVideos(exericiseVideosData.contents);
+			//! fetching similar videos related to the equipment
+			const equipmentExerciseData = await fetchData(
+				`https://exercisedb.p.rapidapi.com/exercises/equipment/${exerciseDetailData.equipment}`,
+				exerciseOptions
+			);
+			setEquipmentExercises(equipmentExerciseData);
+			//! fetching similar videos related to te target muscle
+			const targetMuscleExerciseData = await fetchData(
+				`https://exercisedb.p.rapidapi.com/exercises/target/${exerciseDetailData.target}`,
+				exerciseOptions
+			);
+			setTargetMuscleExercises(targetMuscleExerciseData);
 		};
 		fetchExercisesData();
 	}, [id]);
@@ -41,7 +55,10 @@ export function ExeriseDetail() {
 				exerciseVideos={exerciseVideos}
 				name={exerciseDetail.name}
 			/>
-			<SimilarExercises />
+			{/* <SimilarExercises
+				targetMuscleExercises={targetMuscleExercises}
+				equipmentExercises={equipmentExercises}
+			/> */}
 		</Box>
 	);
 }

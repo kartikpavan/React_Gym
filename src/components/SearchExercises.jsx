@@ -7,6 +7,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 	const [search, setSearch] = useState('');
 	const [bodyParts, setBodyParts] = useState([]);
 
+	//! fetching body part data to display in the category component
 	useEffect(() => {
 		async function exeriseCategory() {
 			const bodyPartsData = await fetchData(
@@ -18,6 +19,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 		exeriseCategory();
 	}, []);
 
+	//! Search Handling function
 	async function handleSearch() {
 		if (search) {
 			const exercisesData = await fetchData(

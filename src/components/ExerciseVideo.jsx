@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
+import Loader from './Loader';
 
 const ExerciseVideo = ({ exerciseVideos, name }) => {
-	if (!exerciseVideos.length) return 'Loading';
+	if (!exerciseVideos.length) return <Loader />;
 
 	return (
 		<Box sx={{ mt: { lg: '200px', xs: '20px' } }} p="20px">

@@ -1,4 +1,4 @@
 # React_Gym
-![image](https://user-images.githubusercontent.com/81632171/176154538-adbc1710-e2b3-48b8-82ef-91efb0d9aff3.png)
+#LIVE @ https://react-gym-seven.vercel.app/
 
-### LIVE @ https://react-gym-seven.vercel.app/
+![download (2)](https://user-images.githubusercontent.com/81632171/188100142-a2070107-e700-4fca-8e5f-5327dc917161.png)
